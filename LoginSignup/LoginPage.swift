@@ -12,6 +12,8 @@ struct LoginPage: View {
     @State private var email: String = ""
     @State private var password: String = ""
     
+    @State private var show = false
+    
     var body: some View {
         ZStack {
             VStack {
@@ -72,6 +74,12 @@ struct LoginPage: View {
                         .bold()
                 }
                 Spacer()
+            }
+            .opacity(self.show ? 1 : 0)
+            .offset(y: self.show ? 0 : -200)
+            .animation(Animation.easeInOut(duration: 0.6).delay(0.1))
+            .onAppear() {
+                self.show.toggle()
             }
         }
     }

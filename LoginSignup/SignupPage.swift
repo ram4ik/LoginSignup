@@ -13,6 +13,8 @@ struct SignupPage: View {
     @State private var password = ""
     @State private var confirmPassword = ""
     
+    @State private var show = false
+    
     var body: some View {
         VStack {
             Spacer()
@@ -77,6 +79,12 @@ struct SignupPage: View {
                 Text("Login")
                     .bold()
             }
+        }
+        .opacity(self.show ? 1 : 0)
+        .offset(y: self.show ? 0 : -200)
+        .animation(Animation.easeInOut(duration: 0.6).delay(0.1))
+        .onAppear() {
+            self.show.toggle()
         }
     }
 }
