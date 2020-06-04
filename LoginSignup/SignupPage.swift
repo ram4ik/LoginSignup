@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SignupPage.swift
 //  LoginSignup
 //
 //  Created by ramil on 04.06.2020.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SignupPage: View {
     var body: some View {
-        MainPage()
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SignupPage_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SignupPage()
     }
 }
