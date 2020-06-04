@@ -34,8 +34,12 @@ struct MainPage: View {
                         .foregroundColor(.black)
                         .padding()
                         .frame(width: 300)
+                        .background(Color("yellow")
+                            .cornerRadius(20)
+                            .offset(y: 2))
                         .overlay(RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.black, lineWidth: 1))
+                    
                 }.padding()
                 
             }.navigationBarTitle(Text("Welcome"))
